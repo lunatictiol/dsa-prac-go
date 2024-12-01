@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package questions
 
 //consider two arrays
 // [a,b,c,d]
@@ -39,13 +37,13 @@ func checkIfSimilarElementExists(arr []string, arr2 []string) bool {
 
 }
 
-func main() {
-	arr1 := []string{"a", "b", "c", "d", "x"}
-	arr2 := []string{"v", "n", "m", "t", "o"}
-	exists := checkIfSimilarElementExists(arr1, arr2)
-	if exists {
-		fmt.Println("exists")
-	} else {
-		fmt.Println("doesnt exists")
-	}
-}
+// func main() {
+// 	arr1 := []string{"a", "b", "c", "d", "x"}
+// 	arr2 := []string{"v", "n", "m", "t", "o"}
+// 	exists := checkIfSimilarElementExists(arr1, arr2)
+// 	if exists {
+// 		fmt.Println("exists")
+// 	} else {
+// 		fmt.Println("doesnt exists")
+// 	}
+// }
