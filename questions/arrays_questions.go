@@ -143,3 +143,122 @@ func TwoSum(nums []int, target int) []int {
 
 	return r
 }
+
+// remove dublicates
+func RemoveDuplicates(nums []int) int {
+
+	m := make(map[int]int)
+
+	for i := 0; i < len(nums); i++ {
+		_, ok := m[nums[i]]
+		if !ok {
+			m[nums[i]] = nums[i]
+		}
+	}
+
+	v := make([]int, 0, len(m))
+	for i, j := 0, nums[0]; i < len(m); i, j = i+1, j+1 {
+		v = append(v, m[j])
+
+	}
+	for i := 0; i < len(v); i++ {
+		nums[i] = v[i]
+	}
+
+	return len(nums)
+
+}
+
+func RemoveDuplicates2(nums []int) int {
+	left := 0
+
+	for right := 0; right < len(nums); right++ {
+		if nums[left] != nums[right] {
+			nums[left+1] = nums[right]
+			left++
+		}
+	}
+	return len(nums[:left+1])
+}
+
+func MovesZeors(nums []int) {
+	j := 0
+
+	for i := 0; i < len(nums); i++ {
+		if nums[i] != 0 {
+
+			nums[i], nums[j] = nums[j], nums[i]
+			j++
+
+		}
+
+	}
+	fmt.Println(nums)
+
+}
+
+func MaxSubArray(nums []int) int {
+	maxSum := nums[0]
+
+	for i := 0; i < len(nums); i++ {
+		currentSum := 0
+		for j := i; j < len(nums); j++ {
+			currentSum = currentSum + nums[j]
+			maxSum = max(currentSum, maxSum)
+		}
+
+	}
+
+	return maxSum
+
+}
+
+func Merge(nums1 []int, m int, nums2 []int, n int) {
+	if m == 1 && n == 0 {
+
+		return
+	}
+	if m == 0 && n == 1 {
+		nums1[0] = nums2[0]
+		return
+	}
+
+	i, j := 0, 0
+
+	// Merge elements until one array is exhausted
+	for i < m && j < n {
+		fmt.Printf(" i %v, nums1 :%v,j %v, nums2 : %v\n", i, nums1[i], j, nums2[j])
+		if nums1[i] < nums2[j] && nums1[i] != nums2[j] {
+			i++
+		} else {
+			nums1[i] = nums2[j]
+			j++
+		}
+
+	}
+
+	fmt.Println(nums1)
+}
+
+func Rotate(nums []int, k int) {
+
+	// a := 0
+	// index := len(nums) - 1
+	// temp := make([]int, 0)
+	// for a < k {
+	// 	temp = append(temp, nums[index])
+
+	// 	a++
+	// 	index--
+	// }
+	// temp = append(temp, nums[:index]...)
+	// copy(nums, temp)
+
+	n := len(nums)
+	k %= n // Handle cases where k > n
+	temp := append(nums[n-k:], nums[:n-k]...)
+	copy(nums, temp)
+
+	fmt.Print(1000 % 100000)
+
+}
