@@ -2,7 +2,9 @@ package questions
 
 import (
 	"fmt"
+	"math/big"
 	"slices"
+	"strconv"
 	"strings"
 )
 
@@ -173,6 +175,8 @@ func RemoveDuplicates2(nums []int) int {
 	left := 0
 
 	for right := 0; right < len(nums); right++ {
+		fmt.Printf("left value: %v\n  ", nums[left])
+		fmt.Printf("Right value: %v\n  ", nums[right])
 		if nums[left] != nums[right] {
 			nums[left+1] = nums[right]
 			left++
@@ -260,5 +264,98 @@ func Rotate(nums []int, k int) {
 	copy(nums, temp)
 
 	fmt.Print(1000 % 100000)
+
+}
+
+func PlusOne(digits []int) {
+
+	b := ""
+	for _, v := range digits {
+		if len(b) > 0 {
+			b += ""
+		}
+		b += strconv.Itoa(v)
+	}
+	largeNumber := new(big.Int)
+	oneBigInt := new(big.Int)
+	oneBigInt.SetString("1", 10)
+	largeNumber.SetString(b, 10)
+	fmt.Println(largeNumber)
+	largeNumber.Add(largeNumber, oneBigInt)
+	value := largeNumber.String()
+	arr := strings.Split(value, "")
+	result := make([]int, 0)
+	for _, v := range arr {
+		s, _ := strconv.Atoi(v)
+		result = append(result, s)
+	}
+
+	fmt.Println(result)
+
+}
+
+/*
+k=  0   1     2 <len(arr)
+ [ 1   2    3 ]
+j=2 1 0
+10^j * arr[k]
+100 * 1 = 100
+10 * 2 = 20
+1 * 3 = 3
+123 + 1
+124
+
+
+ 100    10     1
+100
+20
+3
+123+1 124
+
+k 0  1
+  2  2  2   3
+i 0  1  2  3
+
+
+3
+
+
+    j
+0 , 0, 1, 1, 1, 2 ,2 ,3 ,3, 4
+   i
+i 1
+j 1
+
+*/
+
+func SingleNumber(nums []int) {
+	m := make(map[int]int)
+	var k int
+	//4 1 2 1 2
+	for _, v := range nums {
+		_, ok := m[v]
+		if ok {
+			delete(m, v)
+
+		} else {
+			m[v] = v
+			k = v
+		}
+		fmt.Println(k)
+	}
+
+	//fmt.Println(m[k])
+
+}
+
+func SingleNumberWithXor(nums []int) {
+	m := 2
+	fmt.Println(m ^ 2)
+	// for _, v := range nums {
+	// 	fmt.Println(v)
+	// 	m ^= v
+	// 	fmt.Println(m)
+
+	// }
 
 }
