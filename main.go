@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/lunatictiol/dsa-prac-go/questions"
+	"github.com/lunatictiol/dsa-prac-go/linkedlist"
 )
 
 func main() {
@@ -43,6 +43,21 @@ func main() {
 	// questions.Rotate(nums, 7)
 	// fmt.Println(nums)
 	//questions.PlusOne([]int{7, 2, 8, 5, 0, 9, 1, 2, 9, 5, 3, 6, 6, 7, 3, 2, 8, 4, 3, 7, 9, 5, 7, 7, 4, 7, 4, 9, 4, 7, 0, 1, 1, 1, 7, 4, 0, 0, 6})
-	questions.SingleNumberWithXor([]int{4, 1, 2, 1, 2})
+	//questions.SingleNumberWithXor([]int{4, 1, 2, 1, 2})
+	list := &linkedlist.LinkedList{}
+
+	list.Append(2)
+	list.Append(3)
+	list.Prepend(1)
+	list.Append(4)
+	list.Prepend(0)
+	list.Insert(1, 7)
+	list.Insert(3, 8)
+	list.Insert(7, 10)
+	//	n := list.Get(3)
+	//fmt.Println(n)
+	list.Print()
+	list.Delete(0)
+	list.Print()
 
 }
