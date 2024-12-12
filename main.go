@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/lunatictiol/dsa-prac-go/linkedlist"
+	"github.com/lunatictiol/dsa-prac-go/stack"
 )
 
 func main() {
@@ -46,22 +44,22 @@ func main() {
 	// fmt.Println(nums)
 	//questions.PlusOne([]int{7, 2, 8, 5, 0, 9, 1, 2, 9, 5, 3, 6, 6, 7, 3, 2, 8, 4, 3, 7, 9, 5, 7, 7, 4, 7, 4, 9, 4, 7, 0, 1, 1, 1, 7, 4, 0, 0, 6})
 	//questions.SingleNumberWithXor([]int{4, 1, 2, 1, 2})
-	list := &linkedlist.LinkedList{}
+	// list := &linkedlist.LinkedList{}
 
-	list.Append(2)
-	list.Append(3)
-	list.Prepend(1)
-	list.Append(4)
-	list.Prepend(0)
-	list.Insert(1, 7)
-	list.Insert(3, 8)
-	list.Insert(7, 10)
-	//	n := list.Get(3)
-	//fmt.Println(n)
-	list.Print()
-	list.Reverse()
-	fmt.Println("REVERSE")
-	list.Print()
+	// list.Append(2)
+	// list.Append(3)
+	// list.Prepend(1)
+	// list.Append(4)
+	// list.Prepend(0)
+	// list.Insert(1, 7)
+	// list.Insert(3, 8)
+	// list.Insert(7, 10)
+	// //	n := list.Get(3)
+	// //fmt.Println(n)
+	// list.Print()
+	// list.Reverse()
+	// fmt.Println("REVERSE")
+	// list.Print()
 
 	// list := &doublylinkedlist.DoubleLinkedList{}
 
@@ -75,5 +73,33 @@ func main() {
 	// fmt.Println("after delete")
 	// list.Prepend(55)
 	// list.Print()
+	// stack := &stack.Stack{}
+	// stack.Push(1)
+	// stack.Push(2)
+	// stack.Push(3)
+	// stack.Peek()
+	// stack.Print()
+
+	// stack.Pop()
+	// stack.Print()
+	// stack.Peek()
+	// stack.Pop()
+	// stack.Print()
+	// stack.Pop()
+	// stack.Print()
+
+	stack := &stack.StackArray{}
+	stack.Push(1)
+	stack.Push(2)
+	stack.Push(3)
+	stack.Print()
+	stack.Pop()
+	stack.Print()
+	stack.Pop()
+	stack.Print()
+	stack.Pop()
+	stack.Print()
+	stack.Pop()
+	stack.Print()
 
 }
