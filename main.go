@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/lunatictiol/dsa-prac-go/linkedlist"
 )
 
@@ -57,7 +59,21 @@ func main() {
 	//	n := list.Get(3)
 	//fmt.Println(n)
 	list.Print()
-	list.Delete(0)
+	list.Reverse()
+	fmt.Println("REVERSE")
 	list.Print()
+
+	// list := &doublylinkedlist.DoubleLinkedList{}
+
+	// list.Append(2)
+	// list.Append(3)
+	// list.Append(4)
+	// list.Append(5)
+	// list.Insert(1, 7)
+	// list.Print()
+	// list.Delete(2)
+	// fmt.Println("after delete")
+	// list.Prepend(55)
+	// list.Print()
 
 }

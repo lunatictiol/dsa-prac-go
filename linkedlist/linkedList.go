@@ -53,6 +53,7 @@ func (list *LinkedList) Insert(index int, value any) {
 	}
 	newNode.next = currentNode.next
 	currentNode.next = newNode
+	list.Length++
 
 }
 
@@ -79,6 +80,20 @@ func (list *LinkedList) Print() {
 		current = current.next
 	}
 	fmt.Println()
+}
+
+func (list *LinkedList) Reverse() {
+	current := list.head
+	var prevNode *node
+	var nodeToBeVisited *node
+	for current != nil {
+		nodeToBeVisited = current.next
+		current.next = prevNode
+		prevNode = current
+		current = nodeToBeVisited
+	}
+	list.head = prevNode
+
 }
 
 func (list *LinkedList) Get(index int) any {
