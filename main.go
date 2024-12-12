@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/lunatictiol/dsa-prac-go/stack"
-)
+import "github.com/lunatictiol/dsa-prac-go/stack"
 
 func main() {
 	//arrays.BasicsOfArray()
@@ -73,34 +71,52 @@ func main() {
 	// fmt.Println("after delete")
 	// list.Prepend(55)
 	// list.Print()
-	// stack := &stack.Stack{}
-	// stack.Push(1)
-	// stack.Push(2)
-	// stack.Push(3)
-	// stack.Peek()
-	// stack.Print()
-
-	// stack.Pop()
-	// stack.Print()
-	// stack.Peek()
-	// stack.Pop()
-	// stack.Print()
-	// stack.Pop()
-	// stack.Print()
-
-	stack := &stack.StackArray{}
+	stack := &stack.Stack{}
 	stack.Push(1)
 	stack.Push(2)
 	stack.Push(3)
+	stack.Peek()
+	stack.Print()
+
+	stack.Pop()
 	stack.Print()
 	stack.Peek()
 	stack.Pop()
 	stack.Print()
 	stack.Pop()
 	stack.Print()
-	stack.Pop()
-	stack.Print()
-	stack.Pop()
-	stack.Print()
 
+	// stack := &stack.StackArray{}
+	// stack.Push(1)
+	// stack.Push(2)
+	// stack.Push(3)
+	// stack.Print()
+	// stack.Peek()
+	// stack.Pop()
+	// stack.Print()
+	// stack.Pop()
+	// stack.Print()
+	// stack.Pop()
+	// stack.Print()
+	// stack.Pop()
+	// stack.Print()
+	// queue := &queue.Queue{}
+	// queue.EnQueueu(1)
+	// queue.EnQueueu(2)
+	// queue.EnQueueu(3)
+	// queue.EnQueueu(4)
+
+	// queue.Peek()
+
+	// queue.Print()
+	// queue.DeQueueu()
+	// queue.Print()
+	// queue.DeQueueu()
+	// queue.Print()
+	// queue.DeQueueu()
+	// queue.Print()
+	// queue.DeQueueu()
+	// queue.Print()
+	// queue.DeQueueu()
+	// queue.Print()
 }

@@ -2,7 +2,6 @@ package stack
 
 import (
 	"fmt"
-	"slices"
 )
 
 type element struct {
@@ -21,25 +20,13 @@ func (s *Stack) Push(value int) {
 		s.bottom = s.top
 		return
 	}
-	s.top.next = newNode
+	newNode.next = s.top
 	s.top = newNode
 }
 
 func (s *Stack) Pop() {
-	if s.bottom == nil {
-		fmt.Println("stack is empty")
-		return
-	}
-	if s.bottom == s.top {
-		s.bottom = nil
-		return
-	}
-	var current *element = s.bottom
-	for current.next != s.top {
-		current = current.next
-	}
-	current.next = nil
-	s.top = current
+	s.top = s.top.next
+
 }
 
 func (s *Stack) Peek() {
@@ -51,16 +38,15 @@ func (s *Stack) Print() {
 		fmt.Println("Nothing to print. Stack is empty")
 		return
 	}
-	var current *element = s.bottom
-	temp := make([]int, 0)
+	var current *element = s.top
+	fmt.Print("Top ")
 	for current != nil {
-		temp = append(temp, current.value)
+		fmt.Print(current.value, " ")
+
 		current = current.next
 	}
-	slices.Reverse(temp)
-	fmt.Print("Top : ")
-	fmt.Print(temp)
-	fmt.Println(" : bottom")
+	fmt.Println(" bottom")
+
 }
 
 func (s *Stack) IsEmpty() bool {
