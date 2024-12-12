@@ -73,33 +73,34 @@ func main() {
 	// fmt.Println("after delete")
 	// list.Prepend(55)
 	// list.Print()
-	stack := &stack.Stack{}
-	stack.Push(1)
-	stack.Push(2)
-	stack.Push(3)
-	stack.Peek()
-	stack.Print()
-
-	stack.Pop()
-	stack.Print()
-	stack.Peek()
-	stack.Pop()
-	stack.Print()
-	stack.Pop()
-	stack.Print()
-
-	// stack := &stack.StackArray{}
+	// stack := &stack.Stack{}
 	// stack.Push(1)
 	// stack.Push(2)
 	// stack.Push(3)
+	// stack.Peek()
 	// stack.Print()
+
+	// stack.Pop()
+	// stack.Print()
+	// stack.Peek()
 	// stack.Pop()
 	// stack.Print()
 	// stack.Pop()
 	// stack.Print()
-	// stack.Pop()
-	// stack.Print()
-	// stack.Pop()
-	// stack.Print()
+
+	stack := &stack.StackArray{}
+	stack.Push(1)
+	stack.Push(2)
+	stack.Push(3)
+	stack.Print()
+	stack.Peek()
+	stack.Pop()
+	stack.Print()
+	stack.Pop()
+	stack.Print()
+	stack.Pop()
+	stack.Print()
+	stack.Pop()
+	stack.Print()
 
 }

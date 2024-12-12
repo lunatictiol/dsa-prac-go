@@ -2,7 +2,6 @@ package stack
 
 import (
 	"fmt"
-	"slices"
 )
 
 type StackArray struct {
@@ -11,6 +10,7 @@ type StackArray struct {
 
 func (s *StackArray) Push(element int) {
 	s.data = append(s.data, element)
+
 }
 func (s *StackArray) Pop() {
 	if s.IsEmpty() {
@@ -24,9 +24,12 @@ func (s *StackArray) IsEmpty() bool {
 	return len(s.data) == 0
 }
 
+func (s *StackArray) Peek() {
+	fmt.Printf("Top is %v\n", s.data[len(s.data)-1])
+}
+
 func (s *StackArray) Print() {
-	slices.Reverse(s.data)
-	fmt.Print("Top : ")
+	fmt.Print("Bottom : ")
 	fmt.Print(s.data)
-	fmt.Println(" : bottom")
+	fmt.Println(" : Top")
 }
