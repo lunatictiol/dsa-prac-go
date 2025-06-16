@@ -5,7 +5,7 @@ import (
 )
 
 type node struct {
-	value interface{}
+	value any
 	next  *node
 }
 type LinkedList struct {

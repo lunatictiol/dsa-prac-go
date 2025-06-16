@@ -1,6 +1,9 @@
 package arrays
 
-import "fmt"
+import (
+	"fmt"
+//	"slices"
+)
 
 type MyIntArray struct {
 	length int
@@ -41,14 +44,16 @@ func (a *MyIntArray) Delete(index int) {
 		panic("index is invalid") // Handle invalid index case
 	}
 
-	a.data = append(a.data[:index], a.data[index+1:]...)
+	 a.data = append(a.data[:index], a.data[index+1:]...)
+        
+	// a.data = slices.Delete(a.data,index,index)
 	a.length--
 
 }
 
 func (a *MyIntArray) PrintArray() {
-	for i := 0; i < a.length; i++ {
-		fmt.Print(a.data[i], " ")
+	for _,x:= range a.data {
+		fmt.Print(x, " ")
 	}
 	fmt.Println()
 }

@@ -1,30 +1,34 @@
 package main
 
-import "github.com/lunatictiol/dsa-prac-go/stack"
+import (
+	"fmt"
+
+//	"github.com/lunatictiol/dsa-prac-go/arrays"
+//	"github.com/lunatictiol/dsa-prac-go/stack"
+)
 
 func main() {
-	//arrays.BasicsOfArray()
-
+	// arrays.BasicsOfArray()
+	//
 	// var arr arrays.MyIntArray
-
-	// arr.New(5)
-
-	// arr.Push(1)
-	// arr.Push(2)
-	// arr.Push(3)
-	// arr.Push(4)
-
-	// arr.PrintArray()
-	// // arr.Pop()
-	// // arr.Pop()
-	// // arr.Pop()
-	// // arr.Pop()
-
-	// arr.Delete(2)
-
-	// arr.PrintArray()
-
-	//questions.ReverseStr("string to reverse")
+	//
+	//  arr.New(4)
+	//  arr.Push(1)
+	//  arr.Push(2)
+	//  arr.Push(3)
+	//  arr.Push(4)
+ // 
+	//  arr.PrintArray()
+	// // // arr.Pop()
+	// // // arr.Pop()
+	// // // arr.Pop()
+	// // // arr.Pop()
+	//
+	//  arr.Delete(2)
+	//
+	//  arr.PrintArray()
+	//
+	// //questions.ReverseStr("string to reverse")
 	// sortedArray := questions.SolOfMergeSortedArrays([]int{1, 12, 23, 34}, []int{2, 16, 26, 88})
 	// fmt.Println(sortedArray)
 	//a := questions.TwoSum([]int{3, 2, 4}, 6)
@@ -71,22 +75,22 @@ func main() {
 	// fmt.Println("after delete")
 	// list.Prepend(55)
 	// list.Print()
-	stack := &stack.Stack{}
-	stack.Push(1)
-	stack.Push(2)
-	stack.Push(3)
-	stack.Peek()
-	stack.Print()
-
-	stack.Pop()
-	stack.Print()
-	stack.Peek()
-	stack.Pop()
-	stack.Print()
-	stack.Pop()
-	stack.Print()
-
-	// stack := &stack.StackArray{}
+	// stack := &stack.Stack{}
+	// stack.Push(1)
+	// stack.Push(2)
+	// stack.Push(3)
+	// stack.Peek()
+	// stack.Print()
+	//
+	// stack.Pop()
+	// stack.Print()
+	// stack.Peek()
+	// stack.Pop()
+	// stack.Print()
+	// stack.Pop()
+	// stack.Print()
+ //        stack.Print()
+	// // stack := &stack.StackArray{}
 	// stack.Push(1)
 	// stack.Push(2)
 	// stack.Push(3)
@@ -119,4 +123,7 @@ func main() {
 	// queue.Print()
 	// queue.DeQueueu()
 	// queue.Print()
+
+	fmt.Println("i am testing vim")
+
 }
